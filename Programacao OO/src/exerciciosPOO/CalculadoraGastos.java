@@ -10,6 +10,6 @@ public class CalculadoraGastos {
 		media+=(agua+luz+gas+tele)/4;
 	}
 	public void CalculaGastos(){
-		System.out.print("A media de despesas anual é: "+(media/12));
+		System.out.print("A media de despesas anual é: "+media);
 	}
 }
