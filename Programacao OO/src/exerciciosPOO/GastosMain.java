@@ -8,17 +8,18 @@ public class GastosMain {
 		
 		System.out.print("Este programa faz a media das suas despesas anuais.");
 		float soma=0,media=0;
+		Scanner scanner = new Scanner(System.in);
 		
 		System.out.println("\n\nInsira a media das despesas por mês");
 		
 		System.out.print("Insira o valor das despesas da água: ");
-		gastos.setAgua((new Scanner(System.in)).nextFloat());
+		gastos.setAgua(scanner.nextFloat());
 		System.out.print("Insira o valor das despesas da luz: ");
-		gastos.setLuz((new Scanner(System.in)).nextFloat());
+		gastos.setLuz(scanner.nextFloat());
 		System.out.print("Insira o valor das despesas do gás: ");
-		gastos.setGas((new Scanner(System.in)).nextFloat());
+		gastos.setGas(scanner.nextFloat());
 		System.out.print("Insira o valor das despesas das telecomunicações: ");
-		gastos.setTele((new Scanner(System.in)).nextFloat());
+		gastos.setTele(scanner.nextFloat());
 		
 		soma+=gastos.totalGastos(soma);
 		media=soma/4;

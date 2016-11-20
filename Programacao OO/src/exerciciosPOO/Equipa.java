@@ -1,30 +1,33 @@
 package exerciciosPOO;
 
-import java.util.Vector;
-
 public class Equipa {
 	private String nome="";
-	private Vector<Integer> golos;
+	private String nomeFora="";
+	private Integer golos=0;
+	
+	public Equipa(String nome, String nomeFora, Integer golos){
+		this.nome=nome;
+		this.nomeFora=nomeFora;
+		this.golos=golos;
+	}
 	
 	public void setNome(String nome) {
 		this.nome=nome;
 	}
+	public void setNomeFora(String nomeFora) {
+		this.nomeFora=nomeFora;
+	}
+	public void setGolos(Integer golos){
+		this.golos=golos;
+	}
 	
+	public String getNomeFora(){
+		return this.nomeFora;
+	}
 	public String getNome(){
 		return this.nome;
 	}
-	
-	public void setGolo(int golo,int i){
-		if(this.golos.size()<i+1){
-			for(int j=this.golos.size()-1;j<i;j++){
-				this.golos.add(0);
-			}
-		}
-		this.golos.set(i,golo);
+	public int getGolos(){
+		return this.golos;
 	}
-	
-	public int getGolo(int i){
-		return this.golos.get(i);
-	}
-	
 }
